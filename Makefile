@@ -9,7 +9,7 @@ TARGET = $(basename $@)
 
 PROGRAMMER_TYPE=avr109
 PROGRAMMER_ARGS=-P /dev/tty.usbmodem13101
-SOURCES = $(wildcard gpio/*.c ./includes/*.c)
+SOURCES = $(wildcard $(dir)/*.c ./includes/*.c)
 OBJECTS = $(SOURCES:.c=.o)
 HEADERS = $(SOURCES:.c=.h)
 
